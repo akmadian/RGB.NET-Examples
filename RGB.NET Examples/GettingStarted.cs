@@ -42,6 +42,12 @@ namespace RGB.NET_Examples {
              */
             TimerUpdateTrigger updateTrigger = new TimerUpdateTrigger();
             surface.RegisterUpdateTrigger(updateTrigger);
+            
+            /* You can also trigger an update manually by calling surface.Update();
+            *  If calling surface.Update() more than once, 
+            *      an update trigger is almost always a better option.
+            */
+            surface.Update();
 
             /* To apply an led effect to some device(s), you must first make a ListLedGroup
              * ListLedGroups can be created from an individual IRGBDevice by passing
